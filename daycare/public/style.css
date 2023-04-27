@@ -1,0 +1,44 @@
+/* Header section */
+header {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  /* Navigation links */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  nav ul li a:hover {
+    color: #f8b229;
+  }
+  
