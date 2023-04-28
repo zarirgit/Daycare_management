@@ -59,7 +59,44 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 50px 0;
+      height: 100vh; /* take up full viewport height */
+    }
+
+    .section {
+      height: 100%; /* take up full height of parent element */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #home {
+      background-image: url('https://i.imgur.com/hcler8f.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #about {
+      background-image: url('https://i.imgur.com/62dyM2u.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #programs {
+      background-image: url('https://i.imgur.com/NrU6PEh.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #enroll {
+      background-image: url('https://i.imgur.com/VQ2M03h.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #contact {
+      background-image: url('https://i.imgur.com/dpq37aB.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
     h1 {
@@ -75,19 +112,10 @@
       max-width: 600px;
       margin-bottom: 30px;
     }
-
-    /* Add footer styling */
-    footer {
-      background-color: #444;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-    }
-
     footer p {
       margin-bottom: 0;
     }
+
 
     /* Add media query for smaller screens */
     @media only screen and (max-width: 768px) {
@@ -105,23 +133,57 @@
   <header>
     <div class="logo">Daycare Center</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Programs</a>
-      <a href="#">Enroll</a>
-      <a href="#">Contact Us</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#enroll">Enroll</a>
+      <a href="#contact">Contact Us</a>
       <a href="/login">Log In/Register</a>
     </nav>
   </header>
   
-  <main>
+<main>
+  <section id="home">
     <h1>Welcome to Our Daycare Center</h1>
     <p>We provide quality care for children of all ages in a safe and nurturing environment.</p>
-    <a href="#" class="btn">Learn More</a>
+    <a href="about" class="btn">Learn More</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum vel magna eleifend sagittis. Integer blandit libero quis augue maximus ultrices. Nunc vel posuere magna, at iaculis enim. Nulla faucibus, tellus ut gravida malesuada, sapien sapien finibus libero, a eleifend justo dolor at risus. Fusce finibus, mauris vel dictum vehicula, enim dolor convallis sapien, eget consequat tortor massa eu nisl.</p>
+  </section>
+
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <ul>
+      <li>Infants</li>
+      <li>Toddlers</li>
+      <li>Preschool</li>
+      <li>Pre-K</li>
+    </ul>
+  </section>
+
+  <section id="enroll">
+    <h2>Enroll Your Child</h2>
+    <p>Enrollment is easy! Just fill out our online application and we'll get back to you as soon as possible.</p>
+    <a href="#" class="btn">Apply Now</a>
+  </section>
+
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p>For any questions or inquiries, please contact us using the information below:</p>
+    <ul>
+       <li>Phone: 555-555-5555</li>
+       <li>Email: info@daycarecenter.com</li>
+       <li>Address: 123 Main St, Anytown USA</li>
+    </ul>
+    </section>
+
   </main>
   
   <footer>
-    <p>&copy; 2023 Daycare Center. All rights reserved.</p>
+    <p>&copy; 2023 Daycare Center by Ahmed Zarir Siddique. All rights reserved.</p>
   </footer>
 </body>
 </html>
