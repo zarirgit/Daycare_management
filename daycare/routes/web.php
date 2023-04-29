@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,14 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::post('/reviews', 'App\Http\Controllers\ReviewController@store')->name('reviews.store');
+Route::get('/enroll', 'EnrollController@index')->name('enroll');
+Route::post('/enroll', 'EnrollController@store')->name('enroll.store');
+
+
+
+
+Route::controller(ReviewController::class)->group(function() {
+   Route::get('/', [ReviewController::class, 'index'])->name('home');
+   Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+});
 

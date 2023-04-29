@@ -9,5 +9,11 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $table = 'reviews';
     protected $fillable = ['rating', 'comment'];
+
+    public static function getAverageRating() {
+        $avgRating = self::avg('rating');
+        return round($avgRating, 1);
+    }
 }

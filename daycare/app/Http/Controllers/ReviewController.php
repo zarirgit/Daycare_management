@@ -9,10 +9,10 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $reviews = Review::all();
-        $avg_rating = Review::avg('rating');
+    $reviews = Review::all();
+    $avgRating = $reviews->avg('rating');
 
-        return view('reviews.index', compact('reviews', 'avg_rating'));
+    return view('home', compact('reviews', 'avgRating'));
     }
 
     public function store(Request $request)
