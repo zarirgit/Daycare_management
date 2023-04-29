@@ -59,44 +59,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* take up full viewport height */
-    }
-
-    .section {
-      height: 100%; /* take up full height of parent element */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #home {
-      background-image: url('https://i.imgur.com/hcler8f.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    #about {
-      background-image: url('https://i.imgur.com/62dyM2u.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    #programs {
-      background-image: url('https://i.imgur.com/NrU6PEh.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    #enroll {
-      background-image: url('https://i.imgur.com/VQ2M03h.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    #contact {
-      background-image: url('https://i.imgur.com/dpq37aB.jpg');
-      background-size: cover;
-      background-position: center;
+      padding: 50px 0;
     }
 
     h1 {
@@ -112,10 +75,19 @@
       max-width: 600px;
       margin-bottom: 30px;
     }
+
+    /* Add footer styling */
+    footer {
+      background-color: #444;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
     footer p {
       margin-bottom: 0;
     }
-
 
     /* Add media query for smaller screens */
     @media only screen and (max-width: 768px) {
@@ -127,6 +99,49 @@
         font-size: 18px;
       }
     }
+
+  /* styles for the #home section */
+#home {
+  background-color: #F5DEB3 ;
+  color: #000000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#home h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+#home a.btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#home a.btn:hover {
+  background-color: #fff;
+  color: #f00;
+}
+    
+
   </style>
 </head>
 <body>
@@ -135,7 +150,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#programs">Programs</a>
+      <a href="#reviews">Reviews</a>
       <a href="#enroll">Enroll</a>
       <a href="#contact">Contact Us</a>
       <a href="/login">Log In/Register</a>
@@ -144,9 +159,11 @@
   
 <main>
   <section id="home">
-    <h1>Welcome to Our Daycare Center</h1>
-    <p>We provide quality care for children of all ages in a safe and nurturing environment.</p>
-    <a href="about" class="btn">Learn More</a>
+   <div class="container">
+     <h1>Welcome to our Daycare</h1>
+     <p>We provide high quality care and education for children aged 6 months to 5 years.</p>
+     <a href="about" class="btn">Learn More</a>
+   </div>  
   </section>
 
   <section id="about">
@@ -154,14 +171,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum vel magna eleifend sagittis. Integer blandit libero quis augue maximus ultrices. Nunc vel posuere magna, at iaculis enim. Nulla faucibus, tellus ut gravida malesuada, sapien sapien finibus libero, a eleifend justo dolor at risus. Fusce finibus, mauris vel dictum vehicula, enim dolor convallis sapien, eget consequat tortor massa eu nisl.</p>
   </section>
 
-  <section id="programs">
-    <h2>Our Programs</h2>
-    <ul>
-      <li>Infants</li>
-      <li>Toddlers</li>
-      <li>Preschool</li>
-      <li>Pre-K</li>
-    </ul>
+  <section id="reviews">
+    <h2>Our reviews</h2>
   </section>
 
   <section id="enroll">
@@ -182,8 +193,8 @@
 
   </main>
   
-  <footer>
-    <p>&copy; 2023 Daycare Center by Ahmed Zarir Siddique. All rights reserved.</p>
+  <footer style="background-color: #f5f5f5; padding: 20px; text-align: center;">
+    <p style="font-size: 14px; color: #999;">&copy; 2023 Daycare Center by Ahmed Zarir Siddique. All rights reserved.</p>
   </footer>
 </body>
 </html>
