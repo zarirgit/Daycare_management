@@ -26,3 +26,5 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
+Route::post('/reviews', 'App\Http\Controllers\ReviewController@store')->name('reviews.store');
+

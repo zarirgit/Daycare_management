@@ -166,14 +166,64 @@
    </div>  
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum vel magna eleifend sagittis. Integer blandit libero quis augue maximus ultrices. Nunc vel posuere magna, at iaculis enim. Nulla faucibus, tellus ut gravida malesuada, sapien sapien finibus libero, a eleifend justo dolor at risus. Fusce finibus, mauris vel dictum vehicula, enim dolor convallis sapien, eget consequat tortor massa eu nisl.</p>
-  </section>
+<section id="about" style="background-color: #F8F8F8; padding-top: 50px; padding-bottom: 50px;display: flex; justify-content: center; align-items: center; height: 100vh;">
+   <div class="container">
+     <div class="row justify-content-center">
+       <div class="col-md-8 text-center">
+         <h2 style="font-size: 36px; font-weight: bold; color: #333;">About Us</h2>
+         <p style="font-size: 18px; color: #666; margin-top: 20px;">A safe and nurturing environment for your child</p>
+         <ul style="list-style: disc; margin-top: 30px; font-size: 18px;">
+           <li>Highly qualified and experienced staff</li>
+           <li>Spacious and well-equipped play areas</li>
+           <li>Nutritious and delicious meals and snacks</li>
+           <li>Age-appropriate learning and development activities</li>
+           <li>Flexible schedules and affordable rates</li>
+         </ul>
+       </div>
+     </div>
+   </div>
+</section>
 
-  <section id="reviews">
-    <h2>Our reviews</h2>
-  </section>
+<section id="reviews" style="background-color: #f5f5f5; padding-top: 50px; padding-bottom: 50px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 style="font-size: 36px; font-weight: bold; color: #333;">Reviews</h2>
+        <hr style="width: 10%; height: 3px; background-color: #333; margin: 30px auto;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Write a Review</h3>
+        <form action="{{ route('reviews.store') }}" method="POST">
+          @csrf
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            <select name="rating" id="rating" class="form-control" required>
+              <option value="">Select a rating</option>
+              <option value="1">1 star</option>
+              <option value="2">2 stars</option>
+              <option value="3">3 stars</option>
+              <option value="4">4 stars</option>
+              <option value="5">5 stars</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows="3" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <section id="enroll">
     <h2>Enroll Your Child</h2>
@@ -187,7 +237,7 @@
     <ul>
        <li>Phone: 555-555-5555</li>
        <li>Email: info@daycarecenter.com</li>
-       <li>Address: 123 Main St, Anytown USA</li>
+       <li>Address: Dhaka, Bangladesh</li>
     </ul>
     </section>
 
