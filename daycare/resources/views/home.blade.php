@@ -59,7 +59,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 50px 0;
+      /* padding: 50px 0; */
     }
 
     h1 {
@@ -154,6 +154,7 @@
       <a href="#enroll">Enroll</a>
       <a href="#contact">Contact Us</a>
       <a href="/login">Log In/Register</a>
+      <a href="/admin/panel">Admin</a>
     </nav>
   </header>
   
@@ -166,7 +167,7 @@
    </div>  
   </section>
   
-  <section id="about" style="background-color: #F8F8F8; padding-top: 50px; padding-bottom: 50px;display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <section id="about" style="background-color: #F8F8F8; padding-top: 50px; padding-bottom: 50px;display: flex; justify-content: center; align-items: center; height: 100vh;min-width: 100vw;">
    <div class="container">
      <div class="row justify-content-center">
        <div class="col-md-8 text-center">
@@ -184,7 +185,7 @@
    </div>
   </section>
 
-<section id="reviews" style="background-color: #F5DEB3; padding-top: 50px; padding-bottom: 50px; min-height: 100vh;">
+<section id="reviews" style="background-color: #F5DEB3; padding-top: 50px;display: flex; justify-content: center; align-items: center; padding-bottom: 50px; min-height: 100vh; min-width: 100vw; ">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
@@ -225,7 +226,6 @@
     </div>
   </div>
 </section>
-
 
 
 

@@ -37,6 +37,6 @@ Route::prefix('/admin')-> namespace('App\Http\Controllers\Admin')-> group(functi
 
 Route::controller(ReviewController::class)->group(function() {
    Route::get('/', [ReviewController::class, 'index'])->name('home');
-   Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+   Route::post('/reviews', 'store')->name('reviews.store');
 });
 

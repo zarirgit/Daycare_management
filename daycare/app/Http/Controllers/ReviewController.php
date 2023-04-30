@@ -23,14 +23,14 @@ class ReviewController extends Controller
             'rating' => 'required|integer|between:1,5',
             'comment' => 'required',
         ]);
-
-        $review = new Review();
-        $review->name = $request->name;
-        $review->email = $request->email;
-        $review->rating = $request->rating;
-        $review->comment = $request->comment;
+    
+        $review = new Review;
+        $review->name = $request->input('name');
+        $review->email = $request->input('email');
+        $review->rating = $request->input('rating');
+        $review->comment = $request->input('comment');
         $review->save();
-
-        return redirect()->back()->with('success', 'Thank you for your review!');
+    
+        return redirect()->route('home')->with('success', 'Thank you for your review!');
     }
 }
