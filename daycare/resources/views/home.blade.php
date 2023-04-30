@@ -154,7 +154,7 @@
       <a href="#enroll">Enroll</a>
       <a href="#contact">Contact Us</a>
       <a href="/login">Log In/Register</a>
-      <a href="/admin/panel">Admin</a>
+      <a href="/admin">Admin</a>
     </nav>
   </header>
   
@@ -185,14 +185,14 @@
    </div>
   </section>
 
-<section id="reviews" style="background-color: #F5DEB3; padding-top: 50px;display: flex; justify-content: center; align-items: center; padding-bottom: 50px; min-height: 100vh; min-width: 100vw; ">
+  <section id="reviews" style="background-color: #F5DEB3; padding-top: 50px;display: flex; justify-content: center; align-items: center; padding-bottom: 50px; min-height: 100vh; min-width: 100vw; ">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
         <h2 style="font-size: 36px; font-weight: bold; color: #333;">Reviews</h2>
         <hr style="width: 10%; height: 3px; background-color: #333; margin: 30px auto;">
         @isset($avgRating)
-         <h3 style="margin-bottom: 20px;">Average Rating: {{ $avgRating }}</h3>
+          <h3 style="margin-bottom: 20px;">Average Rating: {{ $avgRating }}</h3>
         @endisset
       </div>
     </div>
@@ -204,6 +204,10 @@
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" name="name" id="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="rating">Rating</label>
@@ -226,6 +230,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 <section id="enroll" style="background-color: #F8F8F8; padding-top: 50px; padding-bottom: 50px;display: flex; justify-content: center; align-items: center; height: 100vh;min-width: 100vw;">

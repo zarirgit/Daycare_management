@@ -11,9 +11,9 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedInteger('rating');
-            $table->text('comment');
-            $table->float('star_rating')->nullable();
+            $table->string('email');
+            $table->integer('rating');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -23,3 +23,4 @@ class CreateReviewsTable extends Migration
         Schema::dropIfExists('reviews');
     }
 }
+
