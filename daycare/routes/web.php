@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\ReviewController;
-
+use App\Http\Controllers\EnrollController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +27,10 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::get('/enroll', 'EnrollController@index')->name('enroll');
-Route::post('/enroll', 'EnrollController@store')->name('enroll.store');
+
+Route::get('/enroll', [EnrollController::class, 'index'])->name('enroll.index');
+Route::post('/enroll', [EnrollController::class, 'store'])->name('enroll.store');
+
 
 Route::prefix('/admin')-> namespace('App\Http\Controllers\Admin')-> group(function(){
     Route:: get('panel','AdminController@panel');

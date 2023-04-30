@@ -228,20 +228,60 @@
 </section>
 
 
+<section id="enroll" style="background-color: #F8F8F8; padding-top: 50px; padding-bottom: 50px;display: flex; justify-content: center; align-items: center; height: 100vh;min-width: 100vw;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 style="font-size: 36px; font-weight: bold; color: #333;">Enroll Your Child</h2>
+        <hr style="width: 10%; height: 3px; background-color: #333; margin: 30px auto;">
+        <p style="font-size: 18px; color: #333;">Choose a time slot for your child to attend:</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center">
+        <h3 style="font-size: 24px; font-weight: bold; color: #333;">9:00 AM - 5:00 PM</h3>
+        <p style="font-size: 18px; color: #333;">Capacity: 5 children</p>
+        <form action="{{ route('enroll.store', ['time_slot' => '9:00-17:00']) }}" method="POST">
+          @csrf
+          <div class="form-group">
+            <label for="child_name" style="font-size: 18px; color: #333;">Child's Name:</label>
+            <input type="text" name="child_name" id="child_name" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: #333; border-color: #333; margin-top: 20px;">Enroll Now</button>
+        </form>
+      </div>
+      <div class="col-md-4 text-center">
+        <h3 style="font-size: 24px; font-weight: bold; color: #333;">11:00 AM - 5:00 PM</h3>
+        <p style="font-size: 18px; color: #333;">Capacity: 5 children</p>
+        <form action="{{ route('enroll.store', ['time_slot' => '11:00-17:00']) }}" method="POST">
+          @csrf
+          <div class="form-group">
+            <label for="child_name" style="font-size: 18px; color: #333;">Child's Name:</label>
+            <input type="text" name="child_name" id="child_name" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: #333; border-color: #333; margin-top: 20px;">Enroll Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 
 
-    <section id="contact">
-    <h2>Contact Us</h2>
+<section id="contact" style="background-color: #F5DEB3; padding: 50px; min-height: 100vh; min-width: 100vw; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <h2 style="font-size: 48px; font-weight: bold; color: #333; margin-bottom: 30px;">Contact Us</h2>
+  <div style="font-size: 24px; line-height: 1.5; text-align: center;">
     <p>For any questions or inquiries, please contact us using the information below:</p>
-    <ul>
-       <li>Phone: 555-555-5555</li>
-       <li>Email: info@daycarecenter.com</li>
-       <li>Address: Dhaka, Bangladesh</li>
+    <ul style="list-style: none; margin: 0; padding: 0;">
+      <li style="margin-bottom: 20px;">Phone: 555-555-5555</li>
+      <li style="margin-bottom: 20px;">Email: info@daycarecenter.com</li>
+      <li style="margin-bottom: 20px;">Address: Dhaka, Bangladesh</li>
     </ul>
-    </section>
+  </div>
+</section>
+
 
   </main>
   
