@@ -30,7 +30,9 @@ Route::controller(LoginRegisterController::class)->group(function() {
 Route::get('/enroll', 'EnrollController@index')->name('enroll');
 Route::post('/enroll', 'EnrollController@store')->name('enroll.store');
 
-
+Route::prefix('/admin')-> namespace('App\Http\Controllers\Admin')-> group(function(){
+    Route:: get('panel','AdminController@panel');
+});
 
 
 Route::controller(ReviewController::class)->group(function() {

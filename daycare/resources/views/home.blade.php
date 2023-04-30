@@ -231,56 +231,7 @@
 
 
 
-<section id="enroll" style="background-color: #F5DEB3; padding-top: 50px; padding-bottom: 50px;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 text-center">
-        <h2 style="font-size: 36px; font-weight: bold; color: #333;">Enroll Your Child</h2>
-        <hr style="width: 10%; height: 3px; background-color: #333; margin: 30px auto;">
-        <p style="font-size: 18px; color: #333;">Choose a time slot for your child to attend:</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-4 text-center">
-        <h3 style="font-size: 24px; font-weight: bold; color: #333;">9:00 AM - 5:00 PM</h3>
-        <p style="font-size: 18px; color: #333;">Capacity: 5 children</p>
-        <form action="{{ route('enroll') }}" method="POST">
-          @csrf
-          <div class="form-group">
-            <label for="child_name" style="font-size: 18px; color: #333;">Child's Name:</label>
-            <input type="text" name="child_name" id="child_name" class="form-control" required>
-          </div>
-          <button type="submit" class="btn btn-primary" style="background-color: #333; border-color: #333; margin-top: 20px;">Enroll Now</button>
-        </form>
-      </div>
-      <div class="col-md-4 text-center">
-        <h3 style="font-size: 24px; font-weight: bold; color: #333;">11:00 AM - 5:00 PM</h3>
-        <p style="font-size: 18px; color: #333;">Capacity: 5 children</p>
-        <form action="{{ route('enroll') }}" method="POST">
-          @csrf
-          <div class="form-group">
-            <label for="child_name" style="font-size: 18px; color: #333;">Child's Name:</label>
-            <input type="text" name="child_name" id="child_name" class="form-control" required>
-          </div>
-          <button type="submit" class="btn btn-primary" style="background-color: #333; border-color: #333; margin-top: 20px;">Enroll Now</button>
-        </form>
-      </div>
-    </div>
-    @if ($extensionRequested)
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-8 text-center">
-          <p style="font-size: 18px; color: #333;">We have received your extension request. We will contact you shortly.</p>
-        </div>
-      </div>
-    @elseif ($enrollmentSuccessful)
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-8 text-center">
-          <p style="font-size: 18px; color: #333;">Thank you for enrolling your child. We will contact you shortly.</p>
-        </div>
-      </div>
-    @endif
-  </div>
-</section>
+
 
     <section id="contact">
     <h2>Contact Us</h2>
